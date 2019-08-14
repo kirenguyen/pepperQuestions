@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75a15d23-0416-4bd2-9bd4-63b25165a5be" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/annotation.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/annotation_edited.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/annotation_no_cancel.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/error_wavs.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TextGrids/genki_q.syllables.TextGrid" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TextGrids/jikan_ga_kakaru_q.syllables.TextGrid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TextGrids/karada_ga_ookii.syllables.TextGrid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TextGrids/long_sentence_ends_in_aru.syllables.TextGrid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TextGrids/maji_q.syllables.TextGrid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TextGrids/medetai_q.syllables.TextGrid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TextGrids/mou_sugu_dekiru_q.syllables.TextGrid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TextGrids/nande_q.syllables.TextGrid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TextGrids/nani_ka_q.syllables.TextGrid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TextGrids/tenki.syllables.TextGrid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TextGrids/warau_q.syllables.TextGrid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TextGrids/yabai.syllables.TextGrid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/praatScratchfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/praatScratchfile.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +22,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/praatScratchfile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="311">
+              <caret line="90" column="20" lean-forward="true" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="20" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -41,11 +34,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-67">
+              <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/annotation_edited.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4089">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/error_wavs.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="334">
+              <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -61,36 +69,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>showtext</find>
-      <find>obj$</find>
-      <find>Selected</find>
-      <find>soundName</find>
-      <find>directory$</find>
-      <find>directory</find>
-      <find>silent</find>
-      <find>points</find>
-      <find>textGrid</find>
-      <find>soundname</find>
-      <find>minmax_scale</find>
-      <find>audioFiles</find>
-      <find>silence_threshold</find>
-      <find>check</find>
-      <find>check_</find>
-      <find>blank_size</find>
-      <find>window_size</find>
-      <find>sound_data</find>
-      <find>silence_thres</find>
-      <find>input</find>
-      <find>mora</find>
-      <find>f0_wave_11_point</find>
+      <find>d76c5b7b84b947c68637e1a3ba86869e</find>
+      <find>dbd89655c8290d15ec87bf4733090f1f</find>
+      <find>53fe9ea3bbb0ddeaa22adc281aa787dd</find>
+      <find>96b9173ab7c8421cb8b5bbaae46d941a</find>
+      <find>06b50a9a76dfb9894b908276f9742221</find>
+      <find>27c</find>
+      <find>0ed1ce6c3036ac15ece9b00fb9a6b34c</find>
+      <find>4ad4fd055cef2a54f2abbb95fdf98ec8</find>
+      <find>7297e968d75963cf0214b5235ee649ad</find>
+      <find>f67d0da8de915f1af3348ed22745d0b3</find>
+      <find>6fa847d28b63fa52d914b19abee299ed</find>
+      <find>0a18b8e725a8225446ec1d83bf6ccc68</find>
+      <find>bc1b3dfabb186d593ea7289fa8c8ecbd</find>
+      <find>cc6814623937ddf6a532437b3438f061</find>
+      <find>3ff6be786bbce4a6d66563f8dec9d6fb</find>
+      <find>bb0d090840568b36690baa57ef74e4a4</find>
+      <find>66596753c4a8e23f50e643b66e5086b8</find>
+      <find>bd1934264883f6922b5d7466987467f9</find>
+      <find>b652be707a280ea1beff8fde61e0b86f</find>
+      <find>32e5cdf7da7f2581733b48b0285986d1</find>
+      <find>d68b8110d59d8b7b4cefe6254758da5f</find>
+      <find>c43181632be3a59cb27cb83b89949693</find>
+      <find>a694c04a794437063e6de8c8781e88b6</find>
+      <find>bc5baad7d41ab5c8fd1d2a2f42ac296c</find>
+      <find>while np.isnan</find>
       <find>to_pitch</find>
-      <find>Sound</find>
-      <find>minimum_syllable_duration</find>
-      <find>text_grid_path</find>
-      <find>syllable_duration</find>
-      <find>cleanup_</find>
-      <find>audio_path</find>
-      <find>last_segment</find>
+      <find>ee6aa32e383979e32de8b87d923508e3</find>
+      <find>66aade01b7bf9677313b97309150857d</find>
+      <find>7450782a61a336602158c4d8c9e94aaa</find>
+      <find>81db536a5022e7a9273dba97ab2819b1</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -107,15 +115,17 @@
         <option value="$PROJECT_DIR$/single_syllable_nuclei_old.praat" />
         <option value="$PROJECT_DIR$/single_syllable_nuclei.praat" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/data/annotation_edited.csv" />
+        <option value="$PROJECT_DIR$/data/error_wavs.csv" />
         <option value="$PROJECT_DIR$/praatScratchfile.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="196" />
-    <option name="y" value="110" />
-    <option name="width" value="1219" />
-    <option name="height" value="790" />
+    <option name="x" value="104" />
+    <option name="y" value="33" />
+    <option name="width" value="1129" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -132,7 +142,7 @@
             <path>
               <item name="pepperQuestions" type="b2602c69:ProjectViewProjectNode" />
               <item name="pepperQuestions" type="462c0819:PsiDirectoryNode" />
-              <item name="TextGrids" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -148,6 +158,7 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/audioFiles" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -167,7 +178,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pepperQuestions" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="praatScratchfile" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pepperQuestions" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -191,6 +223,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.praatScratchfile" />
       </list>
     </recent_temporary>
@@ -218,21 +251,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="196" y="110" width="1219" height="790" extended-state="0" />
+    <frame x="104" y="33" width="1129" height="784" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20868114" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19314079" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.2277937" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.0" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39975247" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32947975" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39884394" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32920793" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32808024" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3538682" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.29768786" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32808024" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -258,6 +291,17 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout-to-restore>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/audioFiles/hello.syllables.TextGrid" />
@@ -320,13 +364,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/single_syllable_nuclei.praat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="71" column="22" lean-forward="true" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TextGrids/genki_q.syllables.TextGrid">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-312" />
@@ -362,16 +399,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TextGrids/jikan_ga_kakaru_q.syllables.TextGrid">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-243">
@@ -379,10 +406,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/single_syllable_nuclei.praat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1065">
+          <caret line="71" column="22" lean-forward="true" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TextGrids/b3e7f6af27cde660900140ab6a185a54.syllables.TextGrid">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/annotation_no_cancel.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="32" selection-end-line="332" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/error_wavs.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/annotation_edited.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4089">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-67">
+          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/praatScratchfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="311">
+          <caret line="90" column="20" lean-forward="true" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="20" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

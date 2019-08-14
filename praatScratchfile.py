@@ -19,24 +19,24 @@ class EndingFinder:
     Estimates a range corresponding to the last spoken
     """
 
-    def __init__(self, sound_name):
+    def __init__(self, sound_name, audio_path = "AudioFiles/"):
 
         self.window_size = 800 // 5
         self.text_grid_path = "TextGrids/"
-        self.window_length = 0.07  # window size
+        self.window_length = 0.07 # window size
         self.syllable_duration = self.window_length * 2  # minimum required audio duration for corresponding window_length
 
         self.force_minimum_duration = True
-        self.cleanup = False
+        self.cleanup = True
 
         self.wav_name = sound_name
-        self.wav_path = "AudioFiles/" + sound_name + '.wav'
+        self.wav_path = audio_path + sound_name + '.wav'
+
         self.sound = parselmouth.Sound(self.wav_path)
 
-        self.pitch_sampling_factor = 0.005
+        self.pitch_sampling_factor = 0.001
 
         self.end_time = self.get_end_of_spoken_time()
-        self.last_syllable_time = self.get_last_syllable_time()
         self.f0_frequencies = self.extract_last_syllable_pitch()
 
 
@@ -86,11 +86,11 @@ class EndingFinder:
         for i, (count, frame) in enumerate(zero_length_array):
             if frame == end_frame and i < len(zero_length_array) - 1:
                 next_count = zero_length_array[i + 1][0]
-                end_frame = end_frame + int(math.floor(next_count * 0.5))
+                end_frame_factor = 0.3
+                end_frame = end_frame + int(math.floor(next_count * end_frame_factor))
                 break
 
         frame = (end_frame) * self.window_size
-        print(frame)
 
         return self.sound.frame_number_to_time(frame)
 
@@ -157,6 +157,8 @@ class EndingFinder:
 
         # get beginning of last syllable and end of file time
 
+        self.last_syllable_time = self.get_last_syllable_time()
+
         print('Last syllable duration:', self.last_syllable_time ,'-', self.end_time)
         last_segment = self.sound.extract_part(self.last_syllable_time, self.end_time)
 
@@ -184,8 +186,6 @@ class F0ApproximationCurveExtractor:
 
     def extract(self, f0List):
 
-        print("f0 Approximation!!!")
-
         ### 前処理．F0を対数化し，正規化する Preprocessing: log and normalize F0
         def normalize(x):
             # """平均0，分散1に正規化する．np.nanは無視する Normalize to mean 0, variance 1. Ignore np.nan"""
@@ -212,6 +212,7 @@ class F0ApproximationCurveExtractor:
 
         while np.isnan(norm_log_f0_last_mora_array)[-1] == True:
             norm_log_f0_last_mora_array = np.delete(norm_log_f0_last_mora_array,-1)
+
 
 
         ### 近似のためのX軸の値の準備 Preparing X-axis values for approximation
@@ -253,7 +254,6 @@ class QuestionClassifier:
     def train(self, train_csv_file, label_csv_file):
         train_data = np.loadtxt(train_csv_file, delimiter=',')
         label_data = np.loadtxt(label_csv_file, delimiter=',')
-        print ("train classifier!!")# Train classifier
 
         train_data = train_data[:, :11]
         train_data[np.isnan(train_data)] = np.finfo(np.float32).min
@@ -280,7 +280,6 @@ class QuestionClassifier:
 
 
     def probability(self, curve_extractor):
-        print("classifier predict!!")
         feature = np.hstack([curve_extractor])
         feature[np.isnan(feature)] = np.finfo(np.float32).min
 
@@ -290,15 +289,15 @@ class QuestionClassifier:
     def get_result(self):
         return self.result
 
+if __name__ == '__main__':
+    ef = EndingFinder(input('Enter name (without .wav) of .wav file: '), "WasedaWavs/")
+    f0List = ef.get_f0_frequency()
 
-ef = EndingFinder(input('Enter name (without .wav) of .wav file: '))
-f0List = ef.get_f0_frequency()
-
-classifier = QuestionClassifier()
-classifier.train("data/datas.csv", "data/labels.csv")
-curve_extractor = F0ApproximationCurveExtractor()
-classifier.probability(curve_extractor.extract(f0List))
-print(classifier.get_result())
+    classifier = QuestionClassifier()
+    classifier.train("data/datas.csv", "data/labels.csv")
+    curve_extractor = F0ApproximationCurveExtractor()
+    classifier.probability(curve_extractor.extract(f0List))
+    print(classifier.get_result())
 
 
 

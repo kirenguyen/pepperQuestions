@@ -1,0 +1,39 @@
+//below this are removals for window size 0.07
+b3e7f6af27cde660900140ab6a185a54,correct,1557295980,元気,false
+847db165febb4f1a869800c6b6fd6be3,correct,1557296060,串田さん,true
+978c7d12df48cd157754f8f19a011383,correct,1557296112,会社ですか？,true
+4203aaa60e6e5982166d36a314012d12,incorrect,1557296233,素晴らしい,false
+b67c3a1948c6287cc49736a6a117039a,incorrect,1557296254,素晴らしい,false
+c3ba28bb8c6b99f93426eb01f1c2ceb2,correct,1557383321,はい,false
+f7e409e143d94121a99db9df16ea9a28,correct,1557379223,外は明るい,false
+d76c5b7b84b947c68637e1a3ba86869e,correct,1557295995,元気？,true
+dbd89655c8290d15ec87bf4733090f1f,correct,1557296041,鈴木さん,false
+d38c630a9d149fecd7733157be660b7a,incorrect,1557296098,会社ですか,false
+8b23f389ee49022559c3ff3e3f5b1402,correct,1557296205,晴れ？,true
+8a209291570553b7fb62bad26c19686f,correct,1557379052,今日は暑い,false
+53fe9ea3bbb0ddeaa22adc281aa787dd,correct,1557379072,今日は暑い？,true
+96b9173ab7c8421cb8b5bbaae46d941a,correct,1557379437,この料理まずい,false
+06b50a9a76dfb9894b908276f9742221,incorrect,1557379449,この漫画つまらない,false
+27c311ec9b46881e1af2906b234395d3,correct,1557379662,気分がいい？,true
+0ed1ce6c3036ac15ece9b00fb9a6b34c,incorrect,1557379991,嫌い？,true
+4ad4fd055cef2a54f2abbb95fdf98ec8,correct,1557380098,この人邪魔,false
+7297e968d75963cf0214b5235ee649ad,correct,1557382895,しんどい,false
+f67d0da8de915f1af3348ed22745d0b3,incorrect,1557382903,しんどい,false
+6fa847d28b63fa52d914b19abee299ed,correct,1557382966,めでたい,false
+0a18b8e725a8225446ec1d83bf6ccc68,correct,1557383055,あら,false
+bc1b3dfabb186d593ea7289fa8c8ecbd,correct,1557383374,真面目に働く,false
+cc6814623937ddf6a532437b3438f061,correct,1557383672,お金を貸す,false
+3ff6be786bbce4a6d66563f8dec9d6fb,incorrect,1557383741,これがわかる,false
+bb0d090840568b36690baa57ef74e4a4,correct,1557383914,椅子に座る,false
+66596753c4a8e23f50e643b66e5086b8,correct,1557384004,この店に入る,false
+bd1934264883f6922b5d7466987467f9,correct,1557384145,東京に住む？,true
+b652be707a280ea1beff8fde61e0b86f,correct,1557384154,地下鉄に乗る,false
+32e5cdf7da7f2581733b48b0285986d1,correct,1557384346,フル,false
+d68b8110d59d8b7b4cefe6254758da5f,correct,1557385252,治る,false
+c43181632be3a59cb27cb83b89949693,correct,1557394214,僕の好きなもの,false
+// below this are remvals from pitching sample changes to 0.001
+a694c04a794437063e6de8c8781e88b6,correct,1557379475,ひどい？,true
+bc5baad7d41ab5c8fd1d2a2f42ac296c,correct,1557384285,お説教を聞く？,true
+//changing end_fame_fractor -> 0.2
+66aade01b7bf9677313b97309150857d,correct,1557394266,Googleの音声認識っていい,false
+
