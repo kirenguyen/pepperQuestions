@@ -1,4 +1,3 @@
-//below this are removals for window size 0.07
 b3e7f6af27cde660900140ab6a185a54,correct,1557295980,元気,false
 847db165febb4f1a869800c6b6fd6be3,correct,1557296060,串田さん,true
 978c7d12df48cd157754f8f19a011383,correct,1557296112,会社ですか？,true
@@ -31,9 +30,6 @@ b652be707a280ea1beff8fde61e0b86f,correct,1557384154,地下鉄に乗る,false
 32e5cdf7da7f2581733b48b0285986d1,correct,1557384346,フル,false
 d68b8110d59d8b7b4cefe6254758da5f,correct,1557385252,治る,false
 c43181632be3a59cb27cb83b89949693,correct,1557394214,僕の好きなもの,false
-// below this are remvals from pitching sample changes to 0.001
 a694c04a794437063e6de8c8781e88b6,correct,1557379475,ひどい？,true
 bc5baad7d41ab5c8fd1d2a2f42ac296c,correct,1557384285,お説教を聞く？,true
-//changing end_fame_fractor -> 0.2
 66aade01b7bf9677313b97309150857d,correct,1557394266,Googleの音声認識っていい,false
-

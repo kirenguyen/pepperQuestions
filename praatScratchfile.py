@@ -8,11 +8,14 @@ import matplotlib.pyplot as plt
 
 from praatio import tgio
 from parselmouth.praat import call, run_file
+import matplotlib.backends.backend_pdf
 
 from sklearn.externals import joblib
 from sklearn.preprocessing import minmax_scale
 from sklearn.ensemble import RandomForestClassifier
 
+out_pdf = './error_syllable_segments.pdf'
+pdf = matplotlib.backends.backend_pdf.PdfPages(out_pdf)
 
 class EndingFinder:
     """
@@ -36,11 +39,11 @@ class EndingFinder:
 
         self.pitch_sampling_factor = 0.001
 
-        self.end_time = self.get_end_of_spoken_time()
+        self.end_time = self.find_end_of_spoken_time()
         self.f0_frequencies = self.extract_last_syllable_pitch()
 
 
-    def get_end_of_spoken_time(self):
+    def find_end_of_spoken_time(self):
         sound_data = self.sound.values.T
         number_of_frames = self.sound.get_number_of_frames()
 
@@ -95,7 +98,7 @@ class EndingFinder:
         return self.sound.frame_number_to_time(frame)
 
 
-    def get_last_syllable_time(self):
+    def parse_last_syllable_time(self):
         """
         Parses a TextGrid object, returning the time of the beginning of the nucleus of the last syllable
         """
@@ -157,7 +160,7 @@ class EndingFinder:
 
         # get beginning of last syllable and end of file time
 
-        self.last_syllable_time = self.get_last_syllable_time()
+        self.last_syllable_time = self.parse_last_syllable_time()
 
         print('Last syllable duration:', self.last_syllable_time ,'-', self.end_time)
         last_segment = self.sound.extract_part(self.last_syllable_time, self.end_time)
@@ -175,6 +178,15 @@ class EndingFinder:
 
     def get_f0_frequency(self):
         return self.f0_frequencies
+
+    def get_sound(self):
+        return self.sound
+
+    def get_syllable_end(self):
+        return self.end_time
+
+    def get_syllable_start(self):
+        return self.last_syllable_time
 
 
 
@@ -289,16 +301,88 @@ class QuestionClassifier:
     def get_result(self):
         return self.result
 
+
+def draw_pitch(pitch):
+    # Extract selected pitch contour, and
+    # replace unvoiced samples by NaN to not plot
+    pitch_values = pitch.selected_array['frequency']
+    pitch_values[pitch_values < 1e-10] = np.nan
+    # pitch_values[pitch_values > 300] = np.nan
+    plt.plot(pitch.xs(), pitch_values, 'o', markersize=5, color='w')
+    plt.plot(pitch.xs(), pitch_values, 'o', markersize=2)
+    plt.grid(False)
+    plt.ylim(0, pitch.ceiling)
+    plt.ylabel("fundamental frequency [Hz]")
+
+
+
+def draw_figure(snd, start_time, end_time, title):
+
+    fig = plt.figure(figsize=(10, 5))
+    plt.subplot(121)
+    plt.plot(snd.xs(), snd.values.T)
+    plt.xlim([snd.xmin, snd.xmax])
+    plt.xlabel("time [s]")
+    plt.ylabel("amplitude")
+    plt.title(title)
+    plt.axvline(x=start_time, color='y')
+    plt.axvline(x=end_time, color='r')
+    plt.subplot(122)
+
+    pitch = snd.to_pitch()
+    # If desired, pre-emphasize the sound fragment before calculating the spectrogram
+    pre_emphasized_snd = snd.copy()
+    pre_emphasized_snd.pre_emphasize()
+
+    draw_pitch(pitch)
+    plt.title(title)
+    plt.xlim([snd.xmin, snd.xmax])
+    plt.axvline(x=start_time, color='g', linewidth=.5)
+    plt.axvline(x=end_time, color='r', linewidth=.5)
+
+    pdf.savefig(fig)
+    # plt.show() # or plt.savefig("spectrogram_0.03.pdf")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 if __name__ == '__main__':
-    ef = EndingFinder(input('Enter name (without .wav) of .wav file: '), "WasedaWavs/")
-    f0List = ef.get_f0_frequency()
+    # ef = EndingFinder(input('Enter name (without .wav) of .wav file: '), "WasedaWavs/")
+    # f0List = ef.get_f0_frequency()
+    #
+    # classifier = QuestionClassifier()
+    # classifier.train("data/datas.csv", "data/labels.csv")
+    # curve_extractor = F0ApproximationCurveExtractor()
+    # classifier.probability(curve_extractor.extract(f0List))
+    # print(classifier.get_result())
 
-    classifier = QuestionClassifier()
-    classifier.train("data/datas.csv", "data/labels.csv")
-    curve_extractor = F0ApproximationCurveExtractor()
-    classifier.probability(curve_extractor.extract(f0List))
-    print(classifier.get_result())
+    entry_array = []
+    with open('data/error_wavs.csv', 'r') as an_file:
+        for line in an_file:
+            entry = line.split(',')
+            entry_array.append(entry)
 
+    for entry in entry_array:
+        file_name = entry[0]
 
+        ending_finder = EndingFinder(file_name, "WasedaWavs/")
 
+        draw_figure(
+            ending_finder.get_sound(),
+            ending_finder.get_syllable_start(),
+            ending_finder.get_syllable_end(),
+            file_name,
+            )
+
+    pdf.close()
 

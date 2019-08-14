@@ -1,16 +1,22 @@
 from praatScratchfile import QuestionClassifier, EndingFinder, F0ApproximationCurveExtractor
 
-def classify_sound(classifier, sound_name):
+import parselmouth
+import numpy as np
+import matplotlib.backends.backend_pdf
+import matplotlib.pyplot as plt
+
+out_pdf = './sound.pdf'
+pdf = matplotlib.backends.backend_pdf.PdfPages(out_pdf)
+
+make_pdf = False
+
+def classify_sound(ending_finder, classifier):
     """
     Classifies a .wav file located in the "AudioFiles/" folder with the name sound_name (no .wav extension)
-    :param sound_name: name of .wav file without the .wav extension
+    :param ef: EndingFinder object loaded with audio's name
     :return: probability that the .wav file is a question
     """
-    ef = EndingFinder(sound_name, "WasedaWavs/")
-    f0List = ef.get_f0_frequency()
-
-    # classifier = QuestionClassifier()
-    # classifier.train("data/datas.csv", "data/labels.csv")
+    f0List = ending_finder.get_f0_frequency()
 
     curve_extractor = F0ApproximationCurveExtractor()
     classifier.probability(curve_extractor.extract(f0List))
@@ -32,6 +38,56 @@ def is_question(waseda_classifier_result, is_classifier_correct):
             is_question = True
 
     return is_question
+
+
+def draw_pitch(pitch):
+    # Extract selected pitch contour, and
+    # replace unvoiced samples by NaN to not plot
+    pitch_values = pitch.selected_array['frequency']
+    pitch_values[pitch_values < 1e-10] = np.nan
+    # pitch_values[pitch_values > 300] = np.nan
+    plt.plot(pitch.xs(), pitch_values, 'o', markersize=5, color='w')
+    plt.plot(pitch.xs(), pitch_values, 'o', markersize=2)
+    plt.grid(False)
+    plt.ylim(0, pitch.ceiling)
+    plt.ylabel("fundamental frequency [Hz]")
+
+
+
+def draw_figure(snd, start_time, end_time, title, text):
+
+    fig = plt.figure(figsize=(10, 5))
+    plt.subplot(121)
+    plt.plot(snd.xs(), snd.values.T)
+    plt.xlim([snd.xmin, snd.xmax])
+    plt.xlabel("time [s]")
+    plt.ylabel("amplitude")
+    plt.title(title)
+    plt.axvline(x=start_time, color='y')
+    plt.axvline(x=end_time, color='r')
+
+    plt.subplot(122)
+
+    pitch = snd.to_pitch()
+    # If desired, pre-emphasize the sound fragment before calculating the spectrogram
+    pre_emphasized_snd = snd.copy()
+    pre_emphasized_snd.pre_emphasize()
+
+    draw_pitch(pitch)
+    plt.title(title)
+    plt.xlim([snd.xmin, snd.xmax])
+    plt.axvline(x=start_time, color='g', linewidth=.5)
+    plt.axvline(x=end_time, color='r', linewidth=.5)
+
+    plt.text(0, 0, text)
+    pdf.savefig(fig)
+    # plt.show() # or plt.savefig("spectrogram_0.03.pdf")
+
+
+
+
+
+
 
 if __name__ == '__main__':
 
@@ -67,7 +123,9 @@ if __name__ == '__main__':
 
         is_this_sentence_question = is_question(waseda_classifier_result, is_classifier_correct)
 
-        question_probablity = classify_sound(classifier, file_name)
+        ending_finder = EndingFinder(file_name, "WasedaWavs/")
+
+        question_probablity = classify_sound(ending_finder, classifier)
 
         if is_this_sentence_question:
             if question_probablity >= 0.5:
@@ -81,7 +139,15 @@ if __name__ == '__main__':
             else:
                 not_question_and_predict_not_question += 1
 
+        if make_pdf:
+            draw_figure(
+                ending_finder.get_sound(),
+                ending_finder.get_syllable_start(),
+                ending_finder.get_syllable_end(),
+                str(total_number) + ': ' + file_name,
+                str(is_this_sentence_question) + ': ' + str(question_probablity))
 
+    pdf.close()
 
     print('total number: ', total_number)
     print('----------------------------------------------------------------------------')
