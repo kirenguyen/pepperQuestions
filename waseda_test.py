@@ -12,7 +12,7 @@ import config
 # Generate and save a pdf showing the area where
 make_pdf = config.setting_bool['make_pdf']
 
-out_pdf = './vad_3_sound.pdf'
+out_pdf = './sound.pdf'
 pdf = matplotlib.backends.backend_pdf.PdfPages(out_pdf)
 
 def classify_sound(ending_finder, classifier):
@@ -154,7 +154,7 @@ if __name__ == '__main__':
     pdf.close()
 
     if not make_pdf:
-        os.remove('./vad_3_sound.pdf')
+        os.remove('./original_sound.pdf')
 
 
     print('total number: ', total_number)

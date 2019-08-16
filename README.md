@@ -102,7 +102,7 @@ print("PROBABILITY THAT IT IS A QUESTION: " , classifier.get_result())
 
 ## Problems:
 
-- current training data ('data/datas.csv') was not used creating the same feature-extraction code.
+- Current training data (`data/datas.csv`) was not used creating the same feature-extraction code.
 - Japanese vs English discrepancies
 - Noise clean-up results in the end of sentences, where the voice tends to get less loud, to lose pitch points, resulting in poorer accuracy with the trained model.
     + `web_rtc_vad` does decent clean-up, but the method of finding the last syllable/mo-ra needs to be changed to accommodate for the slicing/stitching technique.
