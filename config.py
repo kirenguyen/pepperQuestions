@@ -25,13 +25,13 @@ make_pdf: saves a PDF of the segments from waseda_test.py
 '''
 
 setting_bool = {
-    'clean_audio': True,
+    'clean_audio': False,
     'normalize_audio' : False,  # if clean_audio is False, audio will not be normalized
 
     'force_minimum_duration' : True,
     'cleanup': True,    # if False, saves intermediate files to tempData
 
-    'make_pdf' : True,
+    'make_pdf' : False,
 }
 
 
