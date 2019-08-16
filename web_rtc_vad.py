@@ -8,8 +8,11 @@ import webrtcvad
 import config
 import os
 import shutil
+import config
 
 from pydub import AudioSegment
+
+vad_directory = config.setting_paths['default_vad_path']
 
 def read_wave(path):
     """Reads a .wav file.
@@ -40,7 +43,7 @@ def write_wave(path, audio, sample_rate, wav_name):
 
 
 def stitch_wav_files(wav_name):
-    main_directory = 'vad_filtered_audio/' + wav_name
+    main_directory = vad_directory + wav_name
 
     stitched_sounds = None
     for i, filename in enumerate(os.listdir(main_directory)):
@@ -50,7 +53,7 @@ def stitch_wav_files(wav_name):
         else:
             stitched_sounds += AudioSegment.from_wav(main_directory + '/' +'chunk-%002d.wav' % (i,))
 
-    stitched_sounds.export('vad_filtered_audio/'+ wav_name + '.wav', format="wav")
+    stitched_sounds.export(vad_directory + wav_name + '.wav', format="wav")
 
 
 class Frame(object):
@@ -156,27 +159,34 @@ def main(aggressiveness, wav_name, wav_path = config.setting_paths['default_audi
     frames = list(frames)
     segments = vad_collector(sample_rate, 30, 300, vad, frames)
 
-    chunk_folder = 'vad_filtered_audio/' + wav_name
+    chunk_folder = vad_directory + wav_name
     os.mkdir(chunk_folder)
     for i, segment in enumerate(segments):
         path = chunk_folder + '/'+ 'chunk-%002d.wav' % (i,)
         print(' Writing %s' % (path,))
         write_wave(path, segment, sample_rate, wav_name)
 
-def clean_chunks():
-    chunk_directory = 'vad_filtered_audio/'
-    for file in os.listdir(chunk_directory):
+def clean_chunks(directory):
+    """
+    Private helper function to remove all non-.wav files from a directory
+    """
+    for file in os.listdir(directory):
         if not file.endswith(".wav"):
             # delete vad_filtered_audio's wav-subfolder
-            shutil.rmtree(chunk_directory + file + '/', ignore_errors=True, onerror=None)
+            shutil.rmtree(directory + file + '/', ignore_errors=True, onerror=None)
 
 def filter_all_in_directory(directory):
+    """
+    Runs main() on all .wav files in a directory and also cleans up their respective chunks in 'vad_filtered_audio/'
+
+    :param directory: path to the audio-file directory with .wav files
+    """
     for file in os.listdir(directory):
         if file.endswith(".wav"):
             file_name, _ = file.split('.')
             main(3, file_name, directory)
 
-    clean_chunks()
+    clean_chunks(vad_directory)
 
 
 

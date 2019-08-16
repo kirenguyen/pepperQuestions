@@ -63,9 +63,10 @@ Scratch file testing out the undocumented functionality of a library that attemp
         + original_sound.pdf - original .wav used
         + vad_2_sound.pdf - run through level 2 WebRTC VAD
         + vad_3_sound.pdf - run through level 3 WebRTC VAD
-- `WasedaWavs/`
+- `waseda_wavs/`
     + The audio files associated with the CSV files in `data/`. Note the folder `noise_removed` contains all of the audio files in the outer directory, but run through the Praat noise removal script.
-  
+- `vad_filtered_audio`
+    + Currently the default directory where audio files that are modified by `web_rtc_vad.py` is saved to. This can be changed in `config.py`.
 
 #### Others 
 

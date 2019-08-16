@@ -23,8 +23,8 @@ class EndingFinder:
     def __init__(self, sound_name, audio_path = config.setting_paths['default_audio_path']):
 
         self.window_size = 800 // 5
-        self.text_grid_path = "tempData/TextGrids/"
-        self.cleaned_audio_path = "tempData/CleanedAudio/"
+        self.text_grid_path = "temp_data/TextGrids/"
+        self.cleaned_audio_path = "temp_data/CleanedAudio/"
         self.window_length = config.setting_val['window_length'] # window size
         self.minimum_duration = self.window_length * 2  # minimum required audio duration for corresponding window_length
         self.pitch_sampling_factor = config.setting_val['pitch_sampling_factor']
@@ -32,7 +32,7 @@ class EndingFinder:
         self.force_minimum_duration = config.setting_bool['force_minimum_duration']
         self.clean_audio = config.setting_bool['clean_audio']
 
-        self.cleanup = True # remove tempData created after done
+        self.cleanup = True # remove temp_data created after done
 
         self.wav_name = sound_name
         self.wav_path = audio_path + sound_name + '.wav'

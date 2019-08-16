@@ -154,7 +154,7 @@ if __name__ == '__main__':
     pdf.close()
 
     if not make_pdf:
-        os.remove('./original_sound.pdf')
+        os.remove(out_pdf)
 
 
     print('total number: ', total_number)

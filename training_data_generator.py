@@ -22,7 +22,7 @@ def is_question(waseda_classifier_result, is_classifier_correct):
 if __name__ == '__main__':
 
     #optional: clearing the training/label csv files
-    f = open("new_training_data/data.csv", "w")
+    f = open("new_training_data/datas.csv", "w")
     f.truncate()
     f.close()
 
@@ -44,7 +44,7 @@ if __name__ == '__main__':
         waseda_classifier_result = entry[4][:-1]  # \n is in this field
         is_classifier_correct = entry[1]
 
-        ef = EndingFinder(file_name, "WasedaWavs/")
+        ef = EndingFinder(file_name, "waseda_wavs/")
         f0List = ef.get_f0_frequency()
 
         curve_extractor = F0ApproximationCurveExtractor()
