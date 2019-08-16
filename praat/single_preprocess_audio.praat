@@ -1,10 +1,13 @@
-#   edit_sound_files (14 February 2016)
-#   de-noise and/or normalize
-#   Script modified for use in Pepper project
-#
-# 	Wendy Elvira-Garcia
-#	wendyelviragarcia@gmail.com
-#	Laboratori de Fonètica (University of Barcelona)
+###########################################################################
+# 	Wendy Elvira-Garcia                                                   #
+#	wendyelviragarcia@gmail.com                                           #
+#	Laboratori de Fonètica (University of Barcelona)                      #
+###########################################################################
+#                                                                         #                                                                        #
+#    Free use under GNU license: see http://www.gnu.org/licenses/         #
+#    Modified for use by Tran Nguyen for Yoshimoto Robotics Laboratory    #
+#                                                                         #
+###########################################################################
 
 form Cleaning Noise requirements
 	sentence fileName path to the singular .wav file to be modified

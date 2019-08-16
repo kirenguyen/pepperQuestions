@@ -1,3 +1,10 @@
+# from pyAudioAnalysis import audioBasicIO as aIO
+# from pyAudioAnalysis import audioSegmentation as aS
+# [Fs, x] = aIO.readAudioFile("WasedaWavs/0a7f7fb7d0993fe5ba1891da8c58d79f.wav")
+# segments = aS.silenceRemoval(x, Fs, 0.020, 0.020, smoothWindow = 1.0, weight = 0.3, plot = True)
+
+
+
 from pydub import AudioSegment
 from pydub.silence import split_on_silence, detect_nonsilent, detect_silence
 

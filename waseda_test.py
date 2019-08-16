@@ -5,10 +5,15 @@ import numpy as np
 import matplotlib.backends.backend_pdf
 import matplotlib.pyplot as plt
 
-out_pdf = './sound.pdf'
-pdf = matplotlib.backends.backend_pdf.PdfPages(out_pdf)
+import config
 
-make_pdf = False
+# Generate and save a pdf showing the area where
+make_pdf = config.setting_bool['make_pdf']
+
+pdf = None
+if make_pdf:
+    out_pdf = './sound.pdf'
+    pdf = matplotlib.backends.backend_pdf.PdfPages(out_pdf)
 
 def classify_sound(ending_finder, classifier):
     """
@@ -22,6 +27,7 @@ def classify_sound(ending_finder, classifier):
     classifier.probability(curve_extractor.extract(f0List))
 
     return classifier.get_result()
+
 
 def is_question(waseda_classifier_result, is_classifier_correct):
     is_question = None
@@ -51,7 +57,6 @@ def draw_pitch(pitch):
     plt.grid(False)
     plt.ylim(0, pitch.ceiling)
     plt.ylabel("fundamental frequency [Hz]")
-
 
 
 def draw_figure(snd, start_time, end_time, title, text):
@@ -88,18 +93,18 @@ def draw_figure(snd, start_time, end_time, title, text):
 
 if __name__ == '__main__':
 
+    training_data = config.setting_paths['default_data_path']
+    labels = config.setting_paths['default_label_path']
+    test_data = config.setting_paths['default_test_path']
+
     classifier = QuestionClassifier()
-    classifier.train("data/datas.csv", "data/labels.csv")
-    # classifier.train("new_training_data/data.csv", "new_training_data/labels.csv")
+    classifier.train(training_data, labels)
 
     entry_array = []
-    with open('data/annotation_edited.csv', 'r') as an_file:
-    # with open('new_training_data/new_test_files.csv', 'r') as an_file:
+    with open(test_data, 'r') as an_file:
         for line in an_file:
             entry = line.split(',')
             entry_array.append(entry)
-
-    # print(entry_array)
 
     is_question_and_predict_is_question = 0
     is_question_and_predict_not_question = 0
@@ -122,7 +127,7 @@ if __name__ == '__main__':
 
         is_this_sentence_question = is_question(waseda_classifier_result, is_classifier_correct)
 
-        ending_finder = EndingFinder(file_name, "WasedaWavs/")
+        ending_finder = EndingFinder(file_name, config.setting_paths['default_audio_path'])
 
         question_probability = classify_sound(ending_finder, classifier)
 
@@ -146,7 +151,7 @@ if __name__ == '__main__':
                 str(total_number) + ': ' + file_name,
                 str(is_this_sentence_question) + ': ' + str(question_probability))
 
-    pdf.close()
+            pdf.close()
 
     print('total number: ', total_number)
     print('----------------------------------------------------------------------------')

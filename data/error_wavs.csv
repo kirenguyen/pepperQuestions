@@ -33,9 +33,7 @@ c43181632be3a59cb27cb83b89949693,correct,1557394214,僕の好きなもの,false
 a694c04a794437063e6de8c8781e88b6,correct,1557379475,ひどい？,true
 bc5baad7d41ab5c8fd1d2a2f42ac296c,correct,1557384285,お説教を聞く？,true
 66aade01b7bf9677313b97309150857d,correct,1557394266,Googleの音声認識っていい,false
-// removed because no syllables were found (modified wav)
 37f904667342667faef4174dea74738f,correct,1557383805,時間がかかる？,true
-// removed because empty (modified wav)
 ecfc04d515b70e7cd496dd984a104201,incorrect,1557379571,街は賑やか,false
 953fce42f11714b67d1f9f1c7f9521da,correct,1557380359,おの練習辛い,false
 e8f471dc547a5bcd0a6c760bee276b60,correct,1557383186,そうか,false

@@ -21,7 +21,6 @@ def is_question(waseda_classifier_result, is_classifier_correct):
 
 if __name__ == '__main__':
 
-
     #optional: clearing the training/label csv files
     f = open("new_training_data/data.csv", "w")
     f.truncate()
