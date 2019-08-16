@@ -8,9 +8,7 @@ import matplotlib.pyplot as plt
 
 from praatio import tgio
 from parselmouth.praat import call, run_file
-import matplotlib.backends.backend_pdf
 
-from sklearn.externals import joblib
 from sklearn.preprocessing import minmax_scale
 from sklearn.ensemble import RandomForestClassifier
 

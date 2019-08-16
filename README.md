@@ -39,7 +39,7 @@ Generator currently creates basic training data based on annotated files from Wa
 
 File that tests the correctness of the current feature extraction and trained model using Waseda's annotated data. To see a generated PDF of the area where `question_classifier.py` pulled features from, set the `make_pdf` boolean to `True` in `config.py`. 
 
-The model will be trained using the paths specified in `config.py`, as long as they are annotated and in the same format as the original Waseda CSVs: [`data/datas.csv`, `data/labels.csv`, `data/annotation_no_cancel.csv`)
+The model will be trained using the paths specified in `config.py`, as long as they are annotated and in the same format as the original Waseda CSVs: [`data/datas.csv`, `data/labels.csv`, `data/annotation_no_cancel.csv`]
 
 #### `web_rtc_vad.py`
 
@@ -105,7 +105,7 @@ print("PROBABILITY THAT IT IS A QUESTION: " , classifier.get_result())
 - Current training data (`data/datas.csv`) was not used creating the same feature-extraction code.
 - Japanese vs English discrepancies
 - Noise clean-up results in the end of sentences, where the voice tends to get less loud, to lose pitch points, resulting in poorer accuracy with the trained model.
-    + `web_rtc_vad` does decent clean-up, but the method of finding the last syllable/mo-ra needs to be changed to accommodate for the slicing/stitching technique.
+    + `web_rtc_vad.py` does decent clean-up, but the method of finding the last syllable/mo-ra needs to be changed to accommodate for the slicing/stitching technique.
 - Praat is a finicky research tool, not one meant for production. Alternative methods should be sought to find timing of last mo-ra.
 - Major faults with finding the last mora (モーラ); right now, it attempts to fnd the last part of the spoken-speech by using a Syllable Nuclei Script.
     + The method of finding the end of the spoken-segment of the file is inaccurate
@@ -121,8 +121,9 @@ print("PROBABILITY THAT IT IS A QUESTION: " , classifier.get_result())
 ## Suggestions for next steps:
 - At the moment, audio files are pre-processed with standard spectral subtraction via a Praat script for noise cancellation; consider something more heavy-duty for noisier households
     - Noise cancellation
-- consider using a more dedicated voice activity detection library, like: https://github.com/wiseman/py-webrtcvad
+- Consider using a more dedicated voice activity detection library, like: https://github.com/wiseman/py-webrtcvad
     + This is currently the most-up-to-date VAD library, used in most modern browsers and is free for use.
+    + `web_rtc_vad.py` was written to be a sort of starting-point; you can see the pdfs to see how it currently performs.
 - Some quickly written example usages of a few other libraries that attempt to select speech can be found in `audio_splitting.py`
 - I suspect feature extraction from the last estimated syllable is far too naive, especially in noisy rooms or family-rooms. Speaker diarization and audio segmentation will be a key pre-processing step.
     + [PyAudioAnalysis](https://github.com/tyiannak/pyAudioAnalysis) may have some help with this
