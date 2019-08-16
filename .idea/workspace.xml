@@ -2,53 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75a15d23-0416-4bd2-9bd4-63b25165a5be" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_rtc_vad.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/NoiselessAudioFiles/genki_q.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/NoiselessAudioFiles/jikan_ga_kakaru_cut_q.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/NoiselessAudioFiles/jikan_ga_kakaru_q.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/NoiselessAudioFiles/karada_ga_ookii.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/NoiselessAudioFiles/kono_ryouri_mazui_q.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/NoiselessAudioFiles/long_sentence_ends_in_aru.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/NoiselessAudioFiles/maji_q.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/NoiselessAudioFiles/medetai_q.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/NoiselessAudioFiles/mou_sugu_dekiru_q.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/NoiselessAudioFiles/nande_q.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/NoiselessAudioFiles/nani_ka_q.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/NoiselessAudioFiles/sekai.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/NoiselessAudioFiles/something_wo_kaesu.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/NoiselessAudioFiles/tenki.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/NoiselessAudioFiles/warau_q.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/NoiselessAudioFiles/yabai.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/genki_q.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/jikan_ga_kakaru_cut_q.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/jikan_ga_kakaru_q.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/karada_ga_ookii.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/kono_ryouri_mazui_q.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/long_sentence_ends_in_aru.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/maji_q.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/medetai_q.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/mou_sugu_dekiru_q.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/nande_q.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/nani_ka_q.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/sekai.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/something_wo_kaesu.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/tenki.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/warau_q.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AudioFiles/yabai.wav" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio_splitting.py" beforeDir="false" afterPath="$PROJECT_DIR$/audio_splitting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/error_wavs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/error_wavs.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/incorrect_old_error.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modfied_sound_human_bounding_for_cleaning.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_training_data/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/new_training_data/datas.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/question_classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/question_classifier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/remove_noise.praat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/single_remove_noise.praat" beforeDir="false" afterPath="$PROJECT_DIR$/praat/single_preprocess_audio.praat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single_syllable_nuclei.praat" beforeDir="false" afterPath="$PROJECT_DIR$/praat/single_syllable_nuclei.praat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sound.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_data_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/training_data_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/waseda_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/waseda_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,14 +15,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/training_data_generator.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_rtc_vad.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+            <state relative-caret-position="357">
+              <caret line="149" column="39" lean-forward="true" selection-start-line="149" selection-start-column="39" selection-end-line="149" selection-end-column="39" />
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/audio_splitting.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+              <folding>
+                <element signature="e#287#317#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -81,8 +59,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>suffix</find>
-      <find>out_pdf</find>
       <find>proc</find>
       <find>file</find>
       <find>Folder</find>
@@ -111,6 +87,8 @@
       <find>loadmodel</find>
       <find>predict</find>
       <find>predict_proba</find>
+      <find>writeframes</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -137,7 +115,6 @@
         <option value="$PROJECT_DIR$/new_training_data/data.csv" />
         <option value="$PROJECT_DIR$/single_remove_noise.praat" />
         <option value="$PROJECT_DIR$/single_syllable_nuclei.praat" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/data/error_wavs.csv" />
         <option value="$PROJECT_DIR$/training_data_generator.py" />
         <option value="$PROJECT_DIR$/audio_splitting.py" />
@@ -146,13 +123,16 @@
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/data/annotation_edited.csv" />
         <option value="$PROJECT_DIR$/question_classifier.py" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/web_rtc_vad.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="30" />
-    <option name="y" value="19" />
-    <option name="width" value="1385" />
+    <option name="x" value="403" />
+    <option name="y" value="50" />
+    <option name="width" value="1071" />
     <option name="height" value="850" />
   </component>
   <component name="ProjectView">
@@ -166,11 +146,6 @@
             <path>
               <item name="pepperQuestions" type="b2602c69:ProjectViewProjectNode" />
               <item name="pepperQuestions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pepperQuestions" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pepperQuestions" type="462c0819:PsiDirectoryNode" />
-              <item name="praat" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -208,7 +183,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.web_rtc_vad">
     <configuration name="audio_splitting" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pepperQuestions" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -293,8 +268,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="web_rtc_vad" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pepperQuestions" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web_rtc_vad.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.web_rtc_vad" />
         <item itemvalue="Python.training_data_generator" />
         <item itemvalue="Python.praatScratchfile" />
         <item itemvalue="Python.audio_splitting" />
@@ -324,23 +321,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="30" y="19" width="1385" height="850" extended-state="0" />
+    <frame x="403" y="50" width="1071" height="850" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24633431" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.22559367" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49819493" weight="0.31134564" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49819493" visible="true" weight="0.31134564" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39884394" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32911393" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32630098" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.23066103" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32585752" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.22955145" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50180507" side_tool="true" weight="0.32658958" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32770744" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32717678" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -508,33 +505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="153">
-            <caret line="75" column="3" lean-forward="true" selection-start-line="75" selection-start-column="3" selection-end-line="75" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/audio_splitting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#287#317#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/annotation_edited.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="180">
@@ -577,13 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/praat/single_syllable_nuclei.praat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="75" lean-forward="true" selection-start-column="75" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/annotation_no_cancel.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="15">
@@ -601,11 +564,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/training_data_generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+        <state relative-caret-position="132">
+          <caret line="49" column="50" lean-forward="true" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="50" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/praat/single_syllable_nuclei.praat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="75" lean-forward="true" selection-start-column="75" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_rtc_vad.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="149" column="39" lean-forward="true" selection-start-line="149" selection-start-column="39" selection-end-line="149" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="442">
+            <caret line="98" column="23" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="23" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audio_splitting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <element signature="e#287#317#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
