@@ -7,6 +7,9 @@ import webrtcvad
 
 import config
 import os
+import shutil
+
+from pydub import AudioSegment
 
 def read_wave(path):
     """Reads a .wav file.
@@ -23,7 +26,7 @@ def read_wave(path):
         return pcm_data, sample_rate
 
 
-def write_wave(path, audio, sample_rate, name):
+def write_wave(path, audio, sample_rate, wav_name):
     """Writes a .wav file.
     Takes path, PCM audio data, and sample rate.
     """
@@ -32,6 +35,22 @@ def write_wave(path, audio, sample_rate, name):
         wf.setsampwidth(2)
         wf.setframerate(sample_rate)
         wf.writeframes(audio)
+
+    stitch_wav_files(wav_name)
+
+
+def stitch_wav_files(wav_name):
+    main_directory = 'vad_filtered_audio/' + wav_name
+
+    stitched_sounds = None
+    for i, filename in enumerate(os.listdir(main_directory)):
+        print(filename)
+        if stitched_sounds == None:
+            stitched_sounds = AudioSegment.from_wav(main_directory + '/' +'chunk-%002d.wav' % (i,))
+        else:
+            stitched_sounds += AudioSegment.from_wav(main_directory + '/' +'chunk-%002d.wav' % (i,))
+
+    stitched_sounds.export('vad_filtered_audio/'+ wav_name + '.wav', format="wav")
 
 
 class Frame(object):
@@ -131,20 +150,41 @@ def vad_collector(sample_rate, frame_duration_ms,
 
 
 def main(aggressiveness, wav_name, wav_path = config.setting_paths['default_audio_path']):
-
-    audio, sample_rate = read_wave(wav_path + wav_name)
+    audio, sample_rate = read_wave(wav_path + wav_name + '.wav')
     vad = webrtcvad.Vad(int(aggressiveness))
     frames = frame_generator(30, audio, sample_rate)
     frames = list(frames)
     segments = vad_collector(sample_rate, 30, 300, vad, frames)
 
-    chunk_folder = 'chunks/' + wav_name
+    chunk_folder = 'vad_filtered_audio/' + wav_name
     os.mkdir(chunk_folder)
     for i, segment in enumerate(segments):
-        path = chunk_folder + '/chunk-%002d.wav' % (i,)
+        path = chunk_folder + '/'+ 'chunk-%002d.wav' % (i,)
         print(' Writing %s' % (path,))
-        write_wave(path, segment, sample_rate, path)
+        write_wave(path, segment, sample_rate, wav_name)
+
+def clean_chunks():
+    chunk_directory = 'vad_filtered_audio/'
+    for file in os.listdir(chunk_directory):
+        if not file.endswith(".wav"):
+            # delete vad_filtered_audio's wav-subfolder
+            shutil.rmtree(chunk_directory + file + '/', ignore_errors=True, onerror=None)
+
+def filter_all_in_directory(directory):
+    for file in os.listdir(directory):
+        if file.endswith(".wav"):
+            file_name, _ = file.split('.')
+            main(3, file_name, directory)
+
+    clean_chunks()
+
+
+
+
+
+
 
 
 if __name__ == '__main__':
-    main(input('Aggressiveness: int[0,3]: '), input('Path to wav file: '))
+    # main(input('Aggressiveness: int[0,3]: '), input('Path to wav file: '))
+    filter_all_in_directory(input('Target audio directory path to run through WebRTC VAD: '))

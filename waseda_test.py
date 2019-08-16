@@ -1,5 +1,7 @@
 from question_classifier import QuestionClassifier, EndingFinder, F0ApproximationCurveExtractor
 
+import os
+
 import parselmouth
 import numpy as np
 import matplotlib.backends.backend_pdf
@@ -10,10 +12,8 @@ import config
 # Generate and save a pdf showing the area where
 make_pdf = config.setting_bool['make_pdf']
 
-pdf = None
-if make_pdf:
-    out_pdf = './sound.pdf'
-    pdf = matplotlib.backends.backend_pdf.PdfPages(out_pdf)
+out_pdf = './vad_3_sound.pdf'
+pdf = matplotlib.backends.backend_pdf.PdfPages(out_pdf)
 
 def classify_sound(ending_finder, classifier):
     """
@@ -151,7 +151,11 @@ if __name__ == '__main__':
                 str(total_number) + ': ' + file_name,
                 str(is_this_sentence_question) + ': ' + str(question_probability))
 
-            pdf.close()
+    pdf.close()
+
+    if not make_pdf:
+        os.remove('./vad_3_sound.pdf')
+
 
     print('total number: ', total_number)
     print('----------------------------------------------------------------------------')

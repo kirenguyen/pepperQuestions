@@ -4,11 +4,13 @@ Values used to determine fundamental frequency in question_classifier.py, must b
 Window_length: A value of 0.07 has resulted in the best accuracy so-far
 Pitch_sampling_factor: the number of the measurement interval (frame duration), in seconds.
     If you supply 0, Praat will use a time step of 0.75 / (pitch floor), e.g. 0.01 seconds if the pitch floor is 75 Hz
-
+Vad_intensity: An integer in (0, 1, 2, 3) where 0 is the weakest level of voice-less sound removal and 3 is the strongest
 '''
 setting_val = {
     'window_length' : 0.07,             # > 0
     'pitch_sampling_factor' : 0.001,    # >= 0
+
+    'vad_intensty' : 3
 }
 
 
@@ -29,7 +31,7 @@ setting_bool = {
     'force_minimum_duration' : True,
     'cleanup': True,    # if False, saves intermediate files to tempData
 
-    'make_pdf' : False,
+    'make_pdf' : True,
 }
 
 
@@ -45,5 +47,5 @@ setting_paths = {
     'default_test_path' : 'data/annotation_edited.csv',
 
     'default_audio_path' : 'WasedaWavs/'
-
+    # 'default_audio_path' : 'vad_filtered_audio/'
 }

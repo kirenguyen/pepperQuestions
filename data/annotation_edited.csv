@@ -41,7 +41,6 @@ ebd04b517203362caaee378bd05a5ca7,correct,1557379085,明日は寒い,false
 4811efab7913550345a66d015f6255fa,correct,1557379110,明日は寒い？,true
 fb0aef7fe3bcef4b1757477b148b8a2a,correct,1557379123,明後日は暖かい,false
 1552d713c7ac1dcf2ca0dfed0483a4d6,correct,1557379142,明後日は暖かい,false
-5aad57fc44302cbb5f09b604865da06c,correct,1557379164,夜は涼しい,false
 96b6befe0f63a9c2c5f90da8d6b687f0,incorrect,1557379184,夜は涼しい,false
 9c3ae94a3d3b341aba18a17067aaac26,correct,1557379238,部屋の中は暗い？,true
 36f179e1d293673608a0bafe347ac9d2,correct,1557379260,部屋の中は暗い,false
@@ -85,10 +84,8 @@ de22c91b0bb2105b724c0f49861751ae,correct,1557379882,幸せ,false
 31704510d86afa493bbc8270cc00c215,correct,1557379894,いや？,true
 e4aad6cf6d3f69bca966cd4786de03c6,incorrect,1557379905,いや？,true
 e443d9eeb7529003cb0c2c06d37e5146,correct,1557379919,今？,true
-f5f512b5840a2a1daa6acb90dc1efe0d,correct,1557379926,今,false
 617cf13657ece829cc6ba4fa076483ed,correct,1557379936,ステーキ,false
 a006ebd2d0b850bd589950defd2a4f82,correct,1557379945,素敵？,true
-059641c10e721d0bcf44ab06c429a564,correct,1557379954,好き,false
 d0a7b196cfbd0b7353fe1f11f5b00cbf,correct,1557379964,好き？,true
 c7ebe2e0ff2df4ef78c067a142b7b909,correct,1557379975,嫌い？,true
 f25754a65624f95c747da2742a5d92f0,correct,1557380001,嫌い,false
@@ -198,7 +195,6 @@ d8154ee823478348f026f5e82758dbcd,incorrect,1557383835,海で遊ぶ？,true
 d0dc217ff92efd8cf64fa7f2ee74577d,correct,1557383852,プールで泳ぐ？,true
 62cddb1bfaf69b7a26ba6b77df2ae0b0,incorrect,1557383863,明かりを消す？,true
 5bef7483df3d83cd7c77a72fa61c5ec9,correct,1557383871,明かりを消す？,true
-6fac66b15c92f78703bb24099fedb18a,correct,1557383878,明かりを消す,false
 7842d21fcb56c67dc26f1185a6c41852,correct,1557383896,これ使う,false
 72f50e021b0f42930bd3520c6fe51e58,correct,1557383903,これ使う？,true
 22830e097f314de95722ee2889792bc1,correct,1557383921,椅子に座る？,true
@@ -244,9 +240,7 @@ ed00faba23a6dceb55601469edf3f629,incorrect,1557385232,曇る,false
 dd6d73581723d505c7d3f8ea53a12925,correct,1557385259,治る？,true
 24d53531179f9f90179a5226fe4cb147,correct,1557385268,笑う,false
 f62533d2ec7fad42b84171cf4e47d00a,correct,1557385276,笑う？,true
-510369c3f151d8d8b5b1d0b41b46714b,correct,1557387885,れいは,false
 81377b51ac2666a730d37f9ec37a5875,correct,1557387897,れいは,false
-60ccd38bf5ef880f7a2c26741c5db104,correct,1557393958,ウイスキー飲む,false
 ee6d1a8fb0f8051021e414e736111d46,correct,1557393969,ウイスキー飲む,false
 d70df0327999ffb0ccf70c9f7d53ea5d,correct,1557393979,ウイスキー飲む？,true
 6c11a19dbc50ab5d5ca0d425dc4cf4ba,correct,1557394021,串田さんと遊びに行く,false
@@ -268,7 +262,6 @@ e94a5ce11a7709096400b4bed6964d5f,correct,1557463691,ほんとにほんとにほ�
 ef77cb9efef3070a6ac3c51b27ac09e8,incorrect,1557463750,富士サファリパーク？,true
 b09b928a16acba19f6e7ad9dfd18df01,correct,1557495570,しんどい？,true
 74c324a3d2829497d3fd7e782159c6f2,correct,1557970812,ペッパー,false
-1578e268420eabffdbc85ff8dbe22691,correct,1557970824,ペッパー？,true
 67558f1a8260565d29b05116b4536195,correct,1560334574,主ヤンセン？,true
 d6adb0ea88a8872626a9d54b41529e57,correct,1560334586,主ヤンセン,false
 6680d08ecb0f3092e62eba4bd0c57be2,correct,1560855760,元気？,true
